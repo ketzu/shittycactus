@@ -14,7 +14,7 @@ public class MenuScores : MonoBehaviour
     private TextMeshProUGUI cointext;
 
     [SerializeField]
-    private KongAPIManager kongAPI;
+    private ScoreSubmitter _scoreSubmitter = new ScoreSubmitter();
 
     private int _record = 0;
     private int _coins = 0;
@@ -30,8 +30,8 @@ public class MenuScores : MonoBehaviour
         cointext.text = _coins.ToString();
         
         _maxcoins = PlayerPrefs.GetInt("MaxCoins", _coins);
-        kongAPI.submitCoins(_maxcoins);
-        kongAPI.submitHeight(_record);
+        _scoreSubmitter.submitCoins(_maxcoins);
+        _scoreSubmitter.submitHeight(_record);
     }
 
     public void spendCoins(int coins)

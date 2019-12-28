@@ -14,8 +14,7 @@ public class Scores : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI cointext;
 
-    [SerializeField]
-    private KongAPIManager kongAPI;
+    private ScoreSubmitter _scoreSub = new ScoreSubmitter();
 
     private int _record = 0;
     private int _maxheight = 0;
@@ -39,8 +38,8 @@ public class Scores : MonoBehaviour
 
     void onPlayerDeath()
     {
-        kongAPI.submitCoins(_maxcoins);
-        kongAPI.submitHeight(_record);
+        _scoreSub.submitCoins(_maxcoins);
+        _scoreSub.submitHeight(_record);
     }
 
     // Update is called once per frame

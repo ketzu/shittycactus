@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c496eaee042cbca4caee624d6eaab7ae
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DS Roundup
+  fontNames:
+  - DS Roundup
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3a07a8d228cecde45b0c7d0efc35d807, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

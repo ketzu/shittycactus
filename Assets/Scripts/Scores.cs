@@ -22,7 +22,7 @@ public class Scores : MonoBehaviour
     private int _maxcoins = 0;
 
     private GameObject _player;
-
+    
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");

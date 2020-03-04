@@ -21,7 +21,7 @@ mergeInto(LibraryManager.library, {
   SubmitCoins: function (coins) {
 	console.log("Submitting coins!");
 	if(window.kongregate !== undefined) {
-		window.kongregate.stats.submit('Height', coins);
+		window.kongregate.stats.submit('MaxCollectedCoins', coins);
 	}else{
 	console.log("Kongapi is not set.");
 	}

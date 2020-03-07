@@ -21,6 +21,8 @@ public class Scores : MonoBehaviour
     private int _coins = 0;
     private int _maxcoins = 0;
 
+    private int _time = 0;
+
     private GameObject _player;
     
     void Start()
@@ -34,6 +36,8 @@ public class Scores : MonoBehaviour
         _coins = PlayerPrefs.GetInt("Coins", 0);
         _maxcoins = PlayerPrefs.GetInt("MaxCoins", _coins);
         cointext.text = _coins.ToString();
+
+
     }
 
     void onPlayerDeath()

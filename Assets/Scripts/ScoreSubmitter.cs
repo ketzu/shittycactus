@@ -7,6 +7,7 @@ public class ScoreSubmitter
 {
     private Leaderboard _coinboard = new Leaderboard("Max Coins Collected");
     private Leaderboard _heightboard = new Leaderboard("Max Height Reached");
+    private Leaderboard _timeboard = new Leaderboard("Lowest Time to 1200");
 
     public void submitCoins(int coins)
     {
@@ -23,6 +24,19 @@ public class ScoreSubmitter
         {
             SteamUserStats.SetStat("height", height);
             _heightboard.UpdateScore(height);
+        }
+    }
+    public void submitTime(int time)
+    {
+        if (SteamManager.Initialized)
+        {
+            int prev_time;
+            bool success = SteamUserStats.GetStat("time", out prev_time);
+            if (success && prev_time > time)
+            {
+                SteamUserStats.SetStat("time", time);
+                _coinboard.UpdateScore(time);
+            }
         }
     }
 }

@@ -9,6 +9,18 @@ public class MySceneManager : MonoBehaviour
 
     public bool close = true;
 
+    private void Start()
+    {
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.visible = false;
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

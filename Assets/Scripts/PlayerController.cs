@@ -79,8 +79,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        Cursor.visible = false;
-
         _jumpheight = jumpheight_upgrade.getValue();
         _maxspeed = speed_upgrade.getValue();
         _inair_damping = airdamping_upgrade.getValue();

@@ -34,7 +34,7 @@ public class Scores : MonoBehaviour
 
     private bool _race_finished = false;
     private float _goal_height;
-
+    
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");

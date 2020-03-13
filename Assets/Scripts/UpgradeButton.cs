@@ -44,8 +44,6 @@ public class UpgradeButton : MonoBehaviour
         {
             _scorekeeper.spendCoins(up.getCost());
             up.buyCurrent();
-            updateText();
-            updateSlider();
             checkValidity();
             if (!GetComponent<Button>().interactable)
                 _default_on_deactivate.Select();
@@ -54,6 +52,8 @@ public class UpgradeButton : MonoBehaviour
 
     public void checkValidity()
     {
+        updateText();
+        updateSlider();
         var button = GetComponent<Button>();
         if (_scorekeeper.Coins < up.getCost() || up.getCost() <= 0)
             button.interactable = false;

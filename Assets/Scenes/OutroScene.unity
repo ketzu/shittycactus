@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -131,6 +132,7 @@ GameObject:
   - component: {fileID: 618590593}
   - component: {fileID: 618590592}
   - component: {fileID: 618590591}
+  - component: {fileID: 618590594}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -201,6 +203,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &618590594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618590590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6645eab4c782f4fa274c8e4eda587d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _reset_value: 1
 --- !u!1 &1648228527
 GameObject:
   m_ObjectHideFlags: 0

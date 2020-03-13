@@ -47,4 +47,16 @@ public class UpgradeObject : ScriptableObject
             return -1;
         return cost[index+1];
     }
+
+    public int sellAll()
+    {
+        var index = PlayerPrefs.GetInt(Mode.ToString(), -1);
+        var costsum = 0;
+        for(int i= 0; i<=index; i+=1)
+        {
+            costsum += cost[i];
+        }
+        PlayerPrefs.DeleteKey(Mode.ToString());
+        return costsum;
+    }
 }

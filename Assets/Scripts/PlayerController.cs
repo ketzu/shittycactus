@@ -73,11 +73,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int final_unlock;
 
+    public float GoalHeight { get { return final_unlock; } }
     public float Speed { get { return _maxspeed; } }
     public float JumpHeight { get { return _jumpheight; } }
 
     private void Start()
     {
+        Cursor.visible = false;
+
         _jumpheight = jumpheight_upgrade.getValue();
         _maxspeed = speed_upgrade.getValue();
         _inair_damping = airdamping_upgrade.getValue();

@@ -7,19 +7,27 @@ public class MySceneManager : MonoBehaviour
 {
     private Coroutine _active_loadscene;
 
+    public bool close = true;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-#if !UNITY_WEBGL
-            if (SceneManager.GetActiveScene().name != "MainMenu")
-#endif
+            if (SceneManager.GetActiveScene().name != "MainMenu" || !close)
                 SceneManager.LoadScene("MainMenu");
-#if !UNITY_WEBGL
             else
                 Application.Quit();
-#endif
         }
+    }
+
+    public void AllowClosing()
+    {
+        close = true;
+    }
+
+    public void DenyClosing()
+    {
+        close = false;
     }
 
     public void loadNextScene()

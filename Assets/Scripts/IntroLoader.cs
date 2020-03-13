@@ -28,6 +28,8 @@ public class IntroLoader : MonoBehaviour
     
     void Start()
     {
+        Cursor.visible = false;
+
         if(loadtype == type.intro)
         {
             video.url = Application.streamingAssetsPath + "/intro.m4v";

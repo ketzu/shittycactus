@@ -55,6 +55,8 @@ public class Scores : MonoBehaviour
     {
         _scoreSub.submitCoins(_maxcoins);
         _scoreSub.submitHeight(_record);
+
+        _scoreSub.Sync();
     }
 
     // Update is called once per frame

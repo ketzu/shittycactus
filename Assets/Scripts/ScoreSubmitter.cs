@@ -26,6 +26,15 @@ public class ScoreSubmitter
         }
     }
 
+    public void Sync()
+    {
+        Init();
+        if(SteamManager.Initialized)
+        {
+            SteamUserStats.StoreStats();
+        }
+    }
+
     void OnRestulReceived(UserStatsReceived_t param)
     {
         _has_requested_stats = true;
@@ -34,6 +43,7 @@ public class ScoreSubmitter
             _SubmitTime(unsubmitted);
             unsubmitted = 0;
         }
+        Sync();
     }
 
     public void submitCoins(int coins)
@@ -88,6 +98,7 @@ public class ScoreSubmitter
             {
                 SteamUserStats.SetStat("time", time);
                 _timeboard.UpdateScore(time);
+                success = SteamUserStats.GetStat("time", out prev_time);
             }
         }
     }

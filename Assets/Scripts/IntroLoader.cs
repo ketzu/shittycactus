@@ -50,7 +50,7 @@ public class IntroLoader : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetButtonDown("Mute"))
             {
                 video.SetDirectAudioMute(0, !video.GetDirectAudioMute(0));
             }

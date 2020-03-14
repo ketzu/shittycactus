@@ -23,7 +23,7 @@ public class MySceneManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             if (SceneManager.GetActiveScene().name != "MainMenu" || !close)
                 SceneManager.LoadScene("MainMenu");

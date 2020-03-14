@@ -8,9 +8,9 @@ public class SceneReloader : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("r"))
+        if (Input.GetButtonDown("Reload"))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        if (Input.GetKeyDown("escape"))
-            SceneManager.LoadScene(0);
+        if (Input.GetButtonDown("Cancel"))
+            SceneManager.LoadScene("MainMenu");
     }
 }
